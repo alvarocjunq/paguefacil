@@ -1,9 +1,16 @@
-exports.cadastrar = function(cpf, senha, callback){
+function cartaoDao(){}
+
+cartaoDao.prototype.isValidPassword = function(senha, callback){
+	console.log("Verificando se o cartão está válido", senha);
+	callback ({"valid": true});
+}
+
+cartaoDao.prototype.cadastrar = function(cpf, senha, callback){
 	console.log("Cadastrando cartão", cpf, senha);
 	callback({"message": "Cadastrado com sucesso", "code": 123});
 }
 
-exports.cartoes = function(cpf, callback){
+cartaoDao.prototype.cartoes = function(cpf, callback){
 	console.log("Obtendo cartões", cpf);
 	callback ({"cartoes": [{
 						"numero" : "12345678975",
@@ -24,7 +31,4 @@ exports.cartoes = function(cpf, callback){
 				});
 }
 
-exports.isValidPassword = function(senha, callback){
-	console.log("Verificando se o cartão está válido", senha);
-	callback ({"valid": true});
-}
+module.exports = cartaoDao;
