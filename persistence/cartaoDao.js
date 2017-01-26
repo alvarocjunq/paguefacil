@@ -1,17 +1,17 @@
 function cartaoDao(){}
 
 cartaoDao.prototype.isValidPassword = function(senha, callback){
-	console.log("Verificando se o cartão está válido", senha);
+	console.log("Verificando se o cartão está válido, senha:", senha);
 	callback ({"valid": true});
 }
 
-cartaoDao.prototype.cadastrar = function(cpf, senha, callback){
-	console.log("Cadastrando cartão", cpf, senha);
+cartaoDao.prototype.cadastrar = function(cartao, callback){
+	console.log("Cadastrando cartão:", cartao);
 	callback({"message": "Cadastrado com sucesso", "code": 123});
 }
 
 cartaoDao.prototype.cartoes = function(cpf, callback){
-	console.log("Obtendo cartões", cpf);
+	console.log("Obtendo cartões do cpf:", cpf);
 	callback ({"cartoes": [{
 						"numero" : "12345678975",
 						"banco": "Itaú",

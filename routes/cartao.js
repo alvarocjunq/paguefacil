@@ -19,7 +19,7 @@ module.exports = function (app){
 
     app.post('/api/cadastrar', function(request, response) {
         let body = request.body;
-        dao.cadastrar(body.cpf, body.password , function(resp){
+        dao.cadastrar(body, function(resp){
             response.json(resp);
         });
     });
