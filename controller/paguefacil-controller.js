@@ -6,17 +6,22 @@ exports.cadastrar = function(cpf, senha, callback){
 exports.cartoes = function(cpf, callback){
 	console.log("Obtendo cartões", cpf);
 	callback ({"cartoes": [{
-						"numero" : "12345678",
+						"numero" : "12345678975",
+						"banco": "Itaú",
+						"bandeira":"visa",
 						"cvc": "123",
 						"titular": "PEDRO A CABRAL",
 						"senha": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"
 					  },
 					  {
-						"numero" : "87654321",
+						"numero" : "87654321121",
+						"banco": "Santander",
+						"bandeira":"master",
 						"cvc": "321",
 						"titular": "CRISTOVAO COLOMBO",
 						"senha": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"
-	}]});
+					  }]
+				});
 }
 
 exports.isValidPassword = function(senha, callback){
