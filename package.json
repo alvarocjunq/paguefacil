@@ -6,9 +6,9 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "body-parser": "1.14.x",
+    "body-parser": "1.18.2",
     "cors": "^2.8.1",
-    "express": "4.13.x"
+    "express": "4.16.0"
   },
   "repository": {},
   "engines": {
